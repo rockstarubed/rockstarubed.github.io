@@ -13,15 +13,17 @@ document.querySelector('.close-btn').addEventListener('click', function() {
     overlay.style.display = 'none'; // Hide the overlay
 });
 
-// Handle form submission
 document.getElementById('applyForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
-
+    
     // Get form values
     let name = document.getElementById('name').value;
     let mobile = document.getElementById('mobile').value;
     let address = document.getElementById('address').value;
-    let dob = document.getElementById('dob').value;
+    let dobText = document.getElementById('dobText').value;
+
+    // Convert dobText to date format
+    let dob = new Date(dobText).toISOString().split('T')[0];
 
     // Display form values in console
     console.log('Name:', name);
@@ -33,7 +35,6 @@ document.getElementById('applyForm').addEventListener('submit', function(event) 
     overlay.close();
     overlay.style.display = 'none'; // Hide the overlay
 });
-
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('header nav a').forEach(link => {
@@ -71,3 +72,13 @@ document.getElementById('scrollTopBtn').addEventListener('click', function() {
     });
 });
 
+document.getElementById('menuToggle').addEventListener('click', function() {
+    const header = document.querySelector('header');
+    const nav = document.querySelector('header nav');
+    
+    if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'flex';
+    }
+});

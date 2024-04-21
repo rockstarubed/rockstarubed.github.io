@@ -12,24 +12,30 @@
 <body>
     <header>
         <div class="container">
-            <h1>NMDS</h1>
+            <div class="nav-brand">
+                <h1>NMDS</h1>
+                <button id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
             <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
+                <a href="#home"><i class="fas fa-home"></i> Home</a>
+                <a href="#services"><i class="fas fa-tools"></i> Services</a>
+                <a href="#about"><i class="fas fa-users"></i> About Us</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+            </nav>            
         </div>
     </header>
+
 
     <main>
         <section id="home">
             <div class="hero">
-                <h2>Welcome to Our Driving School</h2>
+                <h2>Welcome to National Motor Driving School</h2>
                 <p>Learn to drive safely with us!</p>
-                <button id="applyNowBtn">Apply Now</button>
+                <button id="applyNowBtn">
+                    <i class="fas fa-user-plus"></i> Apply Now
+                </button>                
             </div>
         </section>
         <dialog id="overlay" class="overlay">
@@ -41,9 +47,11 @@
                     <input type="text" id="name" name="name" placeholder="Name" required>
                     <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required>
                     <input type="text" id="address" name="address" placeholder="Address" required>
-                    <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
-                    <button type="submit" id="submitBtn">Get a Call</button>
-                </form>
+                    <input type="text" id="dob" name="dob" placeholder="Date of Birth" required>
+                    <button type="submit" id="submitBtn">
+                        <i class="fas fa-user-plus"></i> Get a Call
+                    </button>
+                </form>                
             </div>
         </dialog>
         <section id="services">
@@ -90,15 +98,75 @@
                 <div class="about-content">
                     <div class="about-text">
                         <h3>Our Story</h3>
-                        <p>We are a leading driving school with branches in Latur, Shirur Tajband, and Udgir. Our team of professional instructors is dedicated to providing quality driving training and services to our students.</p>
-                        <p>With years of experience in the industry, we have helped countless individuals learn to drive safely and confidently. Our comprehensive training programs and personalized approach ensure that our students acquire the necessary skills and knowledge to become responsible drivers.</p>
+                        <p>We are a leading driving school with branches in Latur, Shirur Tajband, and Udgir. Our team
+                            of professional instructors is dedicated to providing quality driving training and services
+                            to our students.</p>
+                        <p>With years of experience in the industry, we have helped countless individuals learn to drive
+                            safely and confidently. Our comprehensive training programs and personalized approach ensure
+                            that our students acquire the necessary skills and knowledge to become responsible drivers.
+                        </p>
                     </div>
                     <div class="about-image">
                         <img src="./assets/images/about-us.jpg" alt="About Us Image">
                     </div>
                 </div>
             </div>
-        </section>               
+        </section>        
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                
+                <div class="follow-us">
+                    <h4>Follow Us On</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f" title="Facebook"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter" title="Twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" title="Instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in" title="LinkedIn"></i>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="contact-details">
+                    <div class="info-field">
+                        <h4>Contact Details</h4>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>123 Street, City, Country</p>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>+1234567890</p>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@example.com</p>
+                        </div>  
+                    </div>              
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Send Feedback</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
         
         <!-- Scroll to Top Button -->
         <button id="scrollTopBtn" title="Go to top">&#8593;</button>
@@ -108,7 +176,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 NMDS Driving School. All Rights Reserved.</p>
+            <p>&copy; 2024 National Motor Driving School. All Rights Reserved.</p>
         </div>
     </footer>
 
