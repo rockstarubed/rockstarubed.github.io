@@ -1,0 +1,365 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+main {
+    margin-top: 5rem;
+}
+
+/* Home section styles */
+#home {
+    background-image: url('./assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#home .hero {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#home h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#home p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#applyNowBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+#applyNowBtn:hover {
+    background-color: #45a049;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    position: relative; /* Make it relative to position the close button */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.close-btn {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #333;
+}
+/* Form styles */
+#applyForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form items */
+}
+
+#applyForm input[type="text"],
+#applyForm input[type="tel"],
+#applyForm input[type="date"] {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+#applyForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width */
+}
+
+#applyForm button:hover {
+    background-color: #45a049;
+}
+
+/* Services section styles */
+#services {
+    padding: 1rem 0;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service i {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.service h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Additional styling for services */
+#services h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+.service-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About Us section styles */
+#about {
+    padding: 4rem 0;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /* Display content in column for mobile */
+    align-items: center;
+}
+
+.about-content .container {
+    display: flex;
+    flex-direction: column; /* Display content in column for mobile */
+    align-items: center;
+    width: 100%; /* Ensure full width */
+}
+
+.about-text {
+    max-width: 600px; /* Limiting max width to prevent overflow */
+    text-align: justify; /* Justify text for better readability */
+    margin-bottom: 2rem; /* Space between text and image for mobile */
+}
+
+.about-text h3 {
+    font-size: 2.4em;
+    margin-bottom: 1.5rem;
+    color: #4CAF50; /* Green color to stand out */
+    border-bottom: 2px solid #4CAF50; /* Underline effect */
+    padding-bottom: 0.5rem; /* Space between text and underline */
+}
+
+.about-text p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.about-image {
+    margin-top: 1.5rem; /* Adding margin to the top for spacing */
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query for Mobile */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Display content side by side for desktop */
+    }
+
+    .about-text {
+        margin-right: 2rem; /* Space between text and image for desktop */
+    }
+
+    .about-image {
+        margin-top: auto; /* Align image to the bottom */
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Scroll to Top Button styles */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    width: 50px;
+}
+
+#scrollTopBtn:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #home .hero h2 {
+        font-size: 2.5em;
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    .service {
+        padding: 20px;
+    }
+
+    #applyForm input[type="text"],
+    #applyForm input[type="tel"],
+    #applyForm input[type="date"],
+    #applyForm button {
+        padding: 10px;
+        font-size: 1em;
+    }
+}

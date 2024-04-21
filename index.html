@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-*****" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>NMDS</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h2>Welcome to Our Driving School</h2>
+                <p>Learn to drive safely with us!</p>
+                <button id="applyNowBtn">Apply Now</button>
+            </div>
+        </section>
+        <dialog id="overlay" class="overlay">
+            <div class="overlay-content">
+                <h3>Apply Now
+                    <span class="close-btn"><i class="fas fa-times"></i></span>
+                </h3>
+                <form id="applyForm">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required>
+                    <input type="text" id="address" name="address" placeholder="Address" required>
+                    <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+                    <button type="submit" id="submitBtn">Get a Call</button>
+                </form>
+            </div>
+        </dialog>
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-container">
+                    <div class="service">
+                        <i class="fas fa-car"></i>
+                        <h3>Four-Wheeler Training</h3>
+                        <p>Learn to drive cars with our professional instructors.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-id-card"></i>
+                        <h3>Driving License</h3>
+                        <p>We assist you in obtaining a driving license for various vehicle types.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-car-alt"></i>
+                        <h3>Vehicle Transfer</h3>
+                        <p>Transfer vehicle ownership hassle-free with our services.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Insurance</h3>
+                        <p>Get assistance with vehicle insurance.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-cloud"></i>
+                        <h3>PUC (Pollution Under Control)</h3>
+                        <p>Ensure your vehicle meets pollution control standards with our PUC services.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-tag"></i>
+                        <h3>Fastag</h3>
+                        <p>Get your Fastag for easy and hassle-free toll payments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Our Driving School</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Our Story</h3>
+                        <p>We are a leading driving school with branches in Latur, Shirur Tajband, and Udgir. Our team of professional instructors is dedicated to providing quality driving training and services to our students.</p>
+                        <p>With years of experience in the industry, we have helped countless individuals learn to drive safely and confidently. Our comprehensive training programs and personalized approach ensure that our students acquire the necessary skills and knowledge to become responsible drivers.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="./assets/images/about-us.jpg" alt="About Us Image">
+                    </div>
+                </div>
+            </div>
+        </section>               
+        
+        <!-- Scroll to Top Button -->
+        <button id="scrollTopBtn" title="Go to top">&#8593;</button>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NMDS Driving School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
