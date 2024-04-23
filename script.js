@@ -57,13 +57,38 @@ document.querySelectorAll('header nav a').forEach(link => {
 });
 
 // Scroll to Top Button Functionality
-window.addEventListener('scroll', function() {
+function isFooterVisible() {
+    const footer = document.querySelector('footer');
+    const rect = footer.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
+// Function to update scroll-to-top button position
+function updateScrollTopButtonPosition() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const footer = document.querySelector('footer');
+    
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById('scrollTopBtn').style.display = 'block';
+        scrollTopBtn.style.display = 'block';
+        if (isFooterVisible()) {
+            const rect = footer.getBoundingClientRect();
+            scrollTopBtn.style.bottom = `${rect.height + 20}px`;
+        } else {
+            scrollTopBtn.style.bottom = '20px';
+        }
     } else {
-        document.getElementById('scrollTopBtn').style.display = 'none';
+        scrollTopBtn.style.display = 'none';
     }
-});
+}
+
+// Event listener to update scroll-to-top button position on scroll
+window.addEventListener('scroll', updateScrollTopButtonPosition);
+
+// Initial update
+updateScrollTopButtonPosition();
+
 
 document.getElementById('scrollTopBtn').addEventListener('click', function() {
     window.scrollTo({
