@@ -9,6 +9,7 @@ body {
     max-width: 960px;
     margin: 0 auto;
 }
+
 /* Header styles */
 header {
     position: fixed;
@@ -34,13 +35,13 @@ header h1 {
 }
 
 header #menuToggle {
-    display: none; /* Hide menu toggle button by default */
+    display: none;
     background: none;
     border: none;
     color: #fff;
     font-size: 1.5em;
     cursor: pointer;
-    margin-right: 20px; /* Add margin to align with heading on mobile */
+    margin-right: 20px;
 }
 
 header nav {
@@ -57,29 +58,6 @@ header nav a {
 
 header nav a:hover {
     color: #4CAF50;
-}
-/* Media Query for Mobile */
-@media (max-width: 767px) {
-    header #menuToggle {
-        display: block; /* Display menu toggle button for mobile */
-        margin-top: 0; /* Remove margin to align it perfectly with the heading */
-        align-self: center; /* Align the hamburger menu to the center vertically */
-    }
-
-    header .nav-brand {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-    }
-    header nav {
-        display: none; /* Hide nav for mobile */
-        flex-direction: column;
-        align-items: start;
-    }
-    
-    header.nav-open nav {
-        display: flex; /* Display nav when header has nav-open class */
-    }        
 }
 
 /* Home section styles */
@@ -138,7 +116,7 @@ header nav a:hover {
 }
 
 .overlay-content {
-    position: relative; /* Make it relative to position the close button */
+    position: relative;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -146,17 +124,19 @@ header nav a:hover {
     max-width: 500px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .close-btn {
     position: absolute;
     right: 10px;
     cursor: pointer;
     color: #333;
 }
+
 /* Form styles */
 #applyForm {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the form items */
+    align-items: center;
 }
 
 #applyForm input[type="text"],
@@ -167,8 +147,8 @@ header nav a:hover {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 1em;
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding in width */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #applyForm button {
@@ -180,7 +160,8 @@ header nav a:hover {
     cursor: pointer;
     font-size: 1.2em;
     transition: background-color 0.3s;
-    width: 100%; /* Full width */
+    width: 100%;
+    /* Full width */
 }
 
 #applyForm button:hover {
@@ -196,6 +177,10 @@ header nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .service {
@@ -228,24 +213,72 @@ header nav a:hover {
     color: #666;
 }
 
-/* Additional styling for services */
 #services h2 {
     text-align: center;
     margin-bottom: 50px;
     font-size: 2.5em;
 }
-
-.service-container {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+/* Recent Posts section styles */
+#recent-posts {
+    padding: 1rem 0;
+    background-color: #f9f9f9;
 }
 
-@media (max-width: 768px) {
-    .service-container {
-        grid-template-columns: 1fr;
-    }
+#recent-posts h2 {
+    font-size: 2.5em;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+#recent-posts .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Spacing between cards */
+    justify-items: center; /* Center cards horizontally */
+}
+
+.post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+    width: 100%;
+    height: 200px; /* Set height as per your requirement */
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 1rem;
+}
+
+.post h3 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.post p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.read-more {
+    display: block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.read-more:hover {
+    background-color: #45a049;
 }
 
 /* About Us section styles */
@@ -262,29 +295,30 @@ header nav a:hover {
 
 .about-content {
     display: flex;
-    flex-direction: column; /* Display content in column for mobile */
+    flex-direction: row;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .about-content .container {
     display: flex;
-    flex-direction: column; /* Display content in column for mobile */
+    flex-direction: column;
     align-items: center;
-    width: 100%; /* Ensure full width */
+    width: 100%;
 }
 
 .about-text {
-    max-width: 600px; /* Limiting max width to prevent overflow */
-    text-align: justify; /* Justify text for better readability */
-    margin-bottom: 2rem; /* Space between text and image for mobile */
+    max-width: 600px;
+    text-align: justify;
+    margin-right: 2rem;
 }
 
 .about-text h3 {
     font-size: 2.4em;
     margin-bottom: 1.5rem;
-    color: #4CAF50; /* Green color to stand out */
-    border-bottom: 2px solid #4CAF50; /* Underline effect */
-    padding-bottom: 0.5rem; /* Space between text and underline */
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
 }
 
 .about-text p {
@@ -294,7 +328,7 @@ header nav a:hover {
 }
 
 .about-image {
-    margin-top: 1.5rem; /* Adding margin to the top for spacing */
+    margin-top: auto;
 }
 
 .about-image img {
@@ -303,23 +337,7 @@ header nav a:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Query for Mobile */
-@media (min-width: 768px) {
-    .about-content {
-        flex-direction: row; /* Display content side by side for desktop */
-    }
-
-    .about-text {
-        margin-right: 2rem; /* Space between text and image for desktop */
-    }
-
-    .about-image {
-        margin-top: auto; /* Align image to the bottom */
-    }
-}
-
 /* Contact Us section styles */
-/* Contact section styles */
 #contact {
     background-color: #f9f9f9;
     padding: 60px 0;
@@ -397,12 +415,14 @@ header nav a:hover {
 #feedbackForm input[type="text"],
 #feedbackForm input[type="email"],
 #feedbackForm textarea {
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 1em;
     box-sizing: border-box;
+    resize: none;
 }
 
 #feedbackForm button {
@@ -431,6 +451,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 /* Scroll to Top Button styles */
 #scrollTopBtn {
     display: none;
@@ -455,6 +476,8 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    /* header styles */
     header .container {
         flex-direction: column;
         align-items: center;
@@ -465,16 +488,35 @@ footer {
         margin: 10px 0;
     }
 
+    header #menuToggle {
+        display: block;
+        /* Display menu toggle button for mobile */
+        margin-top: 0;
+        /* Remove margin to align it perfectly with the heading */
+        align-self: center;
+        /* Align the hamburger menu to the center vertically */
+    }
+
+    header .nav-brand {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: none;
+        /* Hide nav for mobile */
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* Home section styles */
     #home .hero h2 {
         font-size: 2.5em;
     }
 
     #home p {
         font-size: 1em;
-    }
-
-    .service {
-        padding: 20px;
     }
 
     #applyForm input[type="text"],
@@ -485,9 +527,34 @@ footer {
         font-size: 1em;
     }
 
+    /* Services section styles */
+    .service {
+        padding: 20px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    #recent-posts .container {
+        grid-template-columns: auto;
+    }
+
+    /* About us section styles */
+    .about-content {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .about-text {
+        margin-right: 0;
+    }
+
+    /* Contact us section styles */
     #contact .contact-details {
         flex-direction: column;
     }
+
     #contact .contact-details #feedbackForm {
         width: 100%;
     }
