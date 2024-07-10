@@ -15,12 +15,30 @@ document.querySelector('.close-btn').addEventListener('click', function() {
 
 document.getElementById('applyForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
-    
+    const token = '7426616918:AAHXT1Py6hm8cWQR-VxOKRRxSGPv786TMFI'
+    const chatid = '-4244822520'
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    async function sendmsg() {
+        const response = await fetch(proxyUrl+url,{
+            method: 'post',
+            headers: {
+                'Content-type':'application/json',
+            },
+            body: JSON.stringify({
+                chat_id:chatid,
+                text: 'Hello from NMDS webiste'
+            })
+        })
+        const data = await response.json()
+        console.log(data)
+    }
+    sendmsg()
     // Get form values
     let name = document.getElementById('name').value;
     let mobile = document.getElementById('mobile').value;
     let address = document.getElementById('address').value;
-    let dobText = document.getElementById('dobText').value;
+    let dobText = document.getElementById('dob').value;
 
     // Convert dobText to date format
     let dob = new Date(dobText).toISOString().split('T')[0];
